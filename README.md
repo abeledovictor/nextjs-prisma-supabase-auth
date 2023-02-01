@@ -15,3 +15,13 @@ After that run
 ```bash
 npx prisma migrate dev
 ```
+
+
+### You can customize the Email login / signup email if you want:
+
+Check https://next-auth.js.org/providers/email#customizing-emails
+
+
+### You can also customize sign in / sign up page if you want. or create a custom component for it
+
+Check https://next-auth.js.org/providers/email#customizing-emails
