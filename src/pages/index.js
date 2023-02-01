@@ -1,12 +1,11 @@
-
-import { Box, Button } from '@mui/material'
-
+import { Button } from "@mui/material"
+import Layout from "@/components/Layout"
 
 export default function Home() {
   return (
-    <Box>
+    <Layout>
       hi
       <Button>asd</Button>
-    </Box>
+    </Layout>
   )
 }
