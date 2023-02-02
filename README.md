@@ -33,7 +33,9 @@ Check sendWelcomeEmail function at src/pages/api/auth/[...nextauth].js
 
 ### Customize protected / auth-required routes
 
-Edit the protected routes array at src/middleware.js
+Use protectedRoute function from src/utils/protectedRoute.js 
+
+You should use it in page's getServerSideProp. See an example in src/pages/protected.js
 
 ### Image uploads with Supabase
 
