@@ -1,5 +1,4 @@
 export { default } from "next-auth/middleware"
 
-const PROTECTED_ROUTES = ["/protected"]
-
-export const config = { matcher: PROTECTED_ROUTES }
+// Add an array with proctected routes
+export const config = { matcher: ["/protected"] }

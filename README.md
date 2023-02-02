@@ -33,4 +33,4 @@ Check sendWelcomeEmail function at src/pages/api/auth/[...nextauth].js
 
 ### Customize protected / auth-required routes
 
-Edit PROTECTED_ROUTES at src/middleware.js
+Edit the protected routes array at src/middleware.js
