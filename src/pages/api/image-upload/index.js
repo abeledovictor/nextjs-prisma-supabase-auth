@@ -1,6 +1,6 @@
 // Image upload service example using supabase
 
-// import { supabase } from '@/lib/supabase';
+// import { supabase } from '@/utils/supabaseDb';
 // import { nanoid } from 'nanoid';
 // import { decode } from 'base64-arraybuffer';
 
