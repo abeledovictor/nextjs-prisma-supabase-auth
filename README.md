@@ -24,7 +24,7 @@ Check https://next-auth.js.org/providers/email#customizing-emails
 
 ### You can also customize sign in / sign up page if you want. or create a custom component for it
 
-Check https://next-auth.js.org/providers/email#customizing-emails
+Check https://next-auth.js.org/configuration/pages
 
 
 ### You can customize your welcome email
