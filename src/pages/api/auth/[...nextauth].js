@@ -34,7 +34,8 @@ const sendWelcomeEmail = async ({ user }) => {
   }
 };
 
-export default NextAuth({
+export const AUTH_OPTIONS = {
+  secret: process.env.NEXTAUTH_SECRET,
   events: {
     createUser: sendWelcomeEmail
   },
@@ -57,4 +58,6 @@ export default NextAuth({
         maxAge: 15 * 60, // Magic links are valid for 15 min only
       }),
     ],
-  });
+  }
+
+export default NextAuth(AUTH_OPTIONS);

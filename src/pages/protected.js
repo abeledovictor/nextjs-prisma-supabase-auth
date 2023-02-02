@@ -2,6 +2,7 @@ import { Button, Box, Typography } from "@mui/material"
 import Link from 'next/link'
 import Layout from "@/components/Layout"
 import {useSWR, usePostSWR} from '@/hooks/requests'
+import { protectedRoute } from "@/utils/protectedRoute"
 
 export default function Protected() {
   const { data, isLoading, error } = useSWR('/api/counter')
@@ -28,3 +29,5 @@ export default function Protected() {
     </Layout>
   )
 }
+
+export const getServerSideProps = protectedRoute()
