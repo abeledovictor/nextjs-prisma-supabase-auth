@@ -30,3 +30,7 @@ Check https://next-auth.js.org/providers/email#customizing-emails
 ### You can customize your welcome email
 
 Check sendWelcomeEmail function at src/pages/api/auth/[...nextauth].js
+
+### Customize protected / auth-required routes
+
+Edit PROTECTED_ROUTES at src/middleware.js
