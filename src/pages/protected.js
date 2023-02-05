@@ -2,11 +2,13 @@ import { Button, Box, Typography } from "@mui/material"
 import Link from 'next/link'
 import Layout from "@/components/Layout"
 import {useSWR, usePostSWR} from '@/hooks/requests'
-import { protectedRoute } from "@/utils/protectedRoute"
+import useProtectedRoute from "@/hooks/useProtectedRoute"
 
 export default function Protected() {
   const { data, isLoading, error } = useSWR('/api/counter')
   const [postReq, isLoadingPost] = usePostSWR('/api/counter')
+  useProtectedRoute()
+
   return (
     <Layout>
       <Link href="/" passHref legacyBehavior>
@@ -29,5 +31,3 @@ export default function Protected() {
     </Layout>
   )
 }
-
-export const getServerSideProps = protectedRoute()
