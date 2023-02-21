@@ -55,6 +55,9 @@ export const AUTH_OPTIONS = {
         maxAge: 15 * 60, // Magic links are valid for 15 min only
       }),
     ],
+    pages: {
+      signIn: "/signin",
+      },
   }
 
 export default NextAuth(AUTH_OPTIONS);

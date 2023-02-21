@@ -42,12 +42,12 @@ function Nav(props) {
 
   const onLogin = () => {
     handleCloseUserMenu()
-    router.push('/api/auth/signin')
+    router.push('/')
   }
 
   const onSignup = () => {
     handleCloseUserMenu()
-    router.push('/api/auth/signin')
+    router.push('/signin')
   }
 
   const onHome = () => {
