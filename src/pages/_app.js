@@ -3,6 +3,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider } from '@emotion/react';
 import createEmotionCache from '@/utils/createEmotionCache';
+import { ToastProvider } from '@/hooks/useToast';
 import { SessionProvider as AuthProvider } from 'next-auth/react';
 import { theme } from '@/utils/theme';
 import '@/styles/globals.css'
@@ -20,9 +21,11 @@ export default function App(props) {
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        <AuthProvider session={session}>
-          <Component {...pageProps} />
-        </AuthProvider>
+        <ToastProvider>
+          <AuthProvider session={session}>
+            <Component {...pageProps} />
+          </AuthProvider>
+        </ToastProvider>
       </ThemeProvider>
     </CacheProvider>
   )
